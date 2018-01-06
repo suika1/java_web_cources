@@ -11,18 +11,18 @@ public class InteractRunner{
         Scanner reader = new Scanner(System.in);
         try{
             Calculator calc = new Calculator();
-            String action = "no";
-            while (!action.equals("exit")){
+            String action = " ";
+            System.out.println("Write \"exit\" if you want to close program ");
+            while (true){
                 System.out.println("Enter first arg: ");
                 String first = reader.next();
+                if (first.equals("exit")) break;
                 System.out.println("Enter second arg: ");
                 String second = reader.next();
-                System.out.println("Choose action: + - / * % pow  OR exit : ");
+                if (second.equals("exit")) break;
+                System.out.println("Choose action: + - / * % pow : ");
                 action = reader.next();
-                if (action.equals("exit")) { // If programm needs to be shut down
-                    reader.close();
-                    System.exit(0);
-                }
+                if (action.equals("exit")) break;
                 calc.action(action, Integer.valueOf(first), Integer.valueOf(second));
                 calc.getResult();
                 calc.cleanResult();
