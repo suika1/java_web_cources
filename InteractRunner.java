@@ -1,21 +1,31 @@
 import java.util.Scanner;
 
+/**
+ * Главный класс
+ * Чтение аргументов, вывод результата.
+ * @author Suika
+ * @since 05.01.2018
+ */
 public class InteractRunner{
     public static void main(String[] arg){
         Scanner reader = new Scanner(System.in);
         try{
             Calculator calc = new Calculator();
-            String exit = "no";
-            while (!exit.equals("yes")){
+            String action = "no";
+            while (!action.equals("exit")){
                 System.out.println("Enter first arg: ");
                 String first = reader.next();
                 System.out.println("Enter second arg: ");
                 String second = reader.next();
-                calc.add(Integer.valueOf(first),Integer.valueOf(second));
-                System.out.println("Result: " + calc.getResult());
+                System.out.println("Choose action: + - / * % pow  OR exit : ");
+                action = reader.next();
+                if (action.equals("exit")) { // If programm needs to be shut down
+                    reader.close();
+                    System.exit(0);
+                }
+                calc.action(action, Integer.valueOf(first), Integer.valueOf(second));
+                calc.getResult();
                 calc.cleanResult();
-                System.out.println("exit? yes/no : ");
-                exit = reader.next();
             }
         } finally{
             reader.close();
