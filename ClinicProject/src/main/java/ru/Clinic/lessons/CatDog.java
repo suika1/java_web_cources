@@ -39,7 +39,7 @@ public class CatDog implements Pet{
 
     /**
      * Установить имя
-     * @param name новое имя
+     * @param name новое имя котопса
      */
     @Override
     public void setName(String name) {
