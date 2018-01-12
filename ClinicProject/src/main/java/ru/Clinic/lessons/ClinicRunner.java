@@ -32,14 +32,26 @@ public class ClinicRunner {
                     catName = scanner.nextLine();
                     System.out.printf("Введите имя собаки\n");
                     name = scanner.nextLine();
-                    clinic.addClient(position, new Client(id, new CatDog(new Cat(new Animal(catName)), new Dog(new Animal(name)))));
+                    try {
+                        clinic.addClient(position, new Client(id, new CatDog(new Cat(new Animal(catName)), new Dog(new Animal(name)))));
+                    } catch (UserException e){
+                        System.out.println(e.getMessage());
+                    }
                 } else if (type.equals("Dog")||type.equals("Cat")){
                     System.out.printf("Введите имя питомца\n");
                     name = scanner.nextLine();
                     if (type.equals("Cat")) {
-                        clinic.addClient(position, new Client(id, new Cat(new Animal(name))));
+                        try {
+                            clinic.addClient(position, new Client(id, new Cat(new Animal(name))));
+                        } catch (UserException e){
+                        System.out.println(e.getMessage());
+                    }
                     } else if (type.equals("Dog")) {
+                        try {
                         clinic.addClient(position, new Client(id, new Dog(new Animal(name))));
+                        } catch (UserException e){
+                            System.out.println(e.getMessage());
+                        }
                     }
                 } else {
                     System.out.printf("Неверный тип питомца\n");
@@ -50,23 +62,39 @@ public class ClinicRunner {
             } else if (s.equals("find clients")) {
                 System.out.printf("Введите имя питомца искомого клиента:\n");
                 name = scanner.nextLine();
-                clinic.findClientsByPetName(name);
+                try {
+                    clinic.findClientsByPetName(name);
+                } catch (UserException e){
+                    System.out.println(e.getMessage());
+                }
             } else if (s.equals("find pets")) {
                 System.out.printf("Введите id хозяина искомого питомца:\n");
                 id = scanner.nextLine();
-                clinic.findPetsByClientId(id);
+                try {
+                    clinic.findPetsByClientId(id);
+                } catch (UserException e){
+                    System.out.println(e.getMessage());
+                }
             } else if (s.equals("change client id")) {
                 System.out.printf("Введите имя питомца искомого клиента:\n");
                 name = scanner.nextLine();
                 System.out.printf("Введите новое id клиента:\n");
                 id = scanner.nextLine();
-                clinic.changeClientId(name, id);
+                try {
+                    clinic.changeClientId(name, id);
+                } catch (UserException e){
+                    System.out.println(e.getMessage());
+                }
             } else if (s.equals("change pet name")) {
                 System.out.printf("Введите id клиента искомого питомца:\n");
                 id = scanner.nextLine();
                 System.out.printf("Введите новое имя питомца:\n");
                 name = scanner.nextLine();
-                clinic.changePetName(id, name);
+                try {
+                    clinic.changePetName(id, name);
+                } catch (UserException e){
+                    System.out.println(e.getMessage());
+                }
             }
             else {
                 if (!s.equals("exit"))
