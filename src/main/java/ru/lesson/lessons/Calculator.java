@@ -1,7 +1,5 @@
 package ru.lesson.lessons;
 
-import javax.jws.soap.SOAPBinding;
-
 /**
  * Побочный класс
  * @author Suika
