@@ -6,9 +6,15 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * Класс-тест для калькулятора
  * Created by user on 11.01.2018.
  */
 public class CalculatorTest {
+
+    /**
+     * Тест сложения
+     * @throws Exception
+     */
     @Test
     public void testAdd() throws Exception {
         Calculator calculator = new Calculator();
@@ -16,6 +22,10 @@ public class CalculatorTest {
         assertEquals(2,calculator.getResult());
     }
 
+    /**
+     * Тест вычитания
+     * @throws Exception
+     */
     @Test
     public void testSub() throws Exception {
         Calculator calculator = new Calculator();
@@ -23,6 +33,10 @@ public class CalculatorTest {
         assertEquals(1,calculator.getResult());
     }
 
+    /**
+     * Тест деления без аргументов
+     * @throws Exception
+     */
     @Test(expected = UserException.class)
     public void divException() throws UserException {
         Calculator calculator = new Calculator();
@@ -30,6 +44,10 @@ public class CalculatorTest {
 
     }
 
+    /**
+     * Тест деления
+     * @throws Exception
+     */
     @Test()
     public void div() throws UserException {
         Calculator calculator = new Calculator();
@@ -37,12 +55,20 @@ public class CalculatorTest {
         assertEquals(1,calculator.getResult());
     }
 
+    /**
+     * Тест деления на 0
+     * @throws Exception
+     */
     @Test(expected = IllegalArgumentException.class)
     public void divRuntime() throws UserException {
         Calculator calculator = new Calculator();
         calculator.division(1,0);
     }
 
+    /**
+     * Тест умножения
+     * @throws Exception
+     */
     @Test
     public void testMult() throws Exception {
         Calculator calculator = new Calculator();
@@ -50,6 +76,10 @@ public class CalculatorTest {
         assertEquals(6,calculator.getResult());
     }
 
+    /**
+     * Тест возведения в степень
+     * @throws Exception
+     */
     @Test
     public void testPow() throws Exception {
         Calculator calculator = new Calculator();
@@ -57,6 +87,10 @@ public class CalculatorTest {
         assertEquals(64,calculator.getResult());
     }
 
+    /**
+     * Тест остатка
+     * @throws Exception
+     */
     @Test
     public void testMod() throws Exception {
         Calculator calculator = new Calculator();
