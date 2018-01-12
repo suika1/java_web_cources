@@ -12,6 +12,7 @@ public class ClinicTest {
 
     /**
      * Проверка нахождения клиентов по питомцу
+     * Без ошибок
      * @throws Exception
      */
     @Test
@@ -26,9 +27,23 @@ public class ClinicTest {
     }
 
     /**
-     * Проверка нахождения питомцев по клиенту
+     * Ожидаем ошибку
      * @throws Exception
      */
+    @Test(expected = UserException.class)
+    public void findClientsByPetNameExc() throws Exception {
+        Clinic clinic = new Clinic(10);
+        clinic.addClient(0, new Client("Brown", new Cat(new Animal("Johny"))));
+        clinic.addClient(1, new Client("Vika", new Dog(new Animal("Michael"))));
+        clinic.addClient(2, new Client("Chrome", new CatDog(new Cat(new Animal("Jack")), new Dog(new Animal("Daniels")))));
+        clinic.findClientsByPetName("Jojo");
+    }
+
+        /**
+         * Проверка нахождения питомцев по клиенту
+         * Без ошибок
+         * @throws Exception
+         */
     @Test
     public void findPetsByClientId() throws Exception {
         Clinic clinic = new Clinic(10);
@@ -41,9 +56,23 @@ public class ClinicTest {
     }
 
     /**
-     * Проверка смены имени питомца
+     * Ожидаем ошибку
      * @throws Exception
      */
+    @Test(expected = UserException.class)
+    public void findPetsByClientIdExc() throws Exception {
+        Clinic clinic = new Clinic(10);
+        clinic.addClient(0, new Client("Brown", new Cat(new Animal("Johny"))));
+        clinic.addClient(1, new Client("Vika", new Dog(new Animal("Michael"))));
+        clinic.addClient(2, new Client("Chrome", new CatDog(new Cat(new Animal("Jack")), new Dog(new Animal("Daniels")))));
+        clinic.findPetsByClientId("Ooo sometimes");
+    }
+
+        /**
+         * Проверка смены имени питомца
+         * Без ошибок
+         * @throws Exception
+         */
     @Test
     public void changePetName() throws Exception {
         Clinic clinic = new Clinic(10);
@@ -55,9 +84,23 @@ public class ClinicTest {
     }
 
     /**
-     * Проверка смены id клиента
+     * Ожидаем ошибку
      * @throws Exception
      */
+    @Test(expected = UserException.class)
+    public void changePetNameExc() throws Exception {
+        Clinic clinic = new Clinic(10);
+        clinic.addClient(0, new Client("Brown", new Cat(new Animal("Johny"))));
+        clinic.addClient(1, new Client("Vika", new Dog(new Animal("Michael"))));
+        clinic.addClient(2, new Client("Chrome", new CatDog(new Cat(new Animal("Jack")), new Dog(new Animal("Daniels")))));
+        clinic.changePetName("1","vova");
+    }
+
+        /**
+         * Проверка смены id клиента
+         * Без ошибки
+         * @throws Exception
+         */
     @Test
     public void changeClientId() throws Exception {
         Clinic clinic = new Clinic(10);
@@ -68,4 +111,17 @@ public class ClinicTest {
         assertEquals("Firefox",clinic.findClientsByPetName("JackDaniels")[0].getId());
     }
 
-}
+    /**
+     * Ожидаем ошибку
+     * @throws Exception
+     */
+    @Test(expected = UserException.class)
+    public void changeClientIdExc() throws Exception {
+        Clinic clinic = new Clinic(10);
+        clinic.addClient(0, new Client("Brown", new Cat(new Animal("Johny"))));
+        clinic.addClient(1, new Client("Vika", new Dog(new Animal("Michael"))));
+        clinic.addClient(2, new Client("Chrome", new CatDog(new Cat(new Animal("Jack")), new Dog(new Animal("Daniels")))));
+        clinic.changeClientId("h","rika");
+    }
+
+    }
