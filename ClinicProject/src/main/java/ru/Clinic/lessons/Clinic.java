@@ -21,8 +21,7 @@ public class Clinic {
     public void showDataBase(){
         for (Client client : this.clients) {
             if (client != null)
-                System.out.println("Client " + client.getId() + " has "
-                        + client.getPet().getClass().getName() + " " + client.getPet().getName());
+                System.out.println("Client " + client.getId() + " has a pet " + client.getPet().getName());
         }
 
     }

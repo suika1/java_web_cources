@@ -67,8 +67,10 @@ public class ClinicRunner {
                 System.out.printf("Введите новое имя питомца:\n");
                 name = scanner.nextLine();
                 clinic.changePetName(id, name);
-            } else {
-                System.out.printf("Неверно выбрано действие\n");
+            }
+            else {
+                if (!s.equals("exit"))
+                  System.out.printf("Неверно выбрано действие\n");
             }
         }
         scanner.close();
