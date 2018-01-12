@@ -13,7 +13,7 @@ public class CalculatorTest {
 
     /**
      * Тест сложения
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test
     public void testAdd() throws Exception {
@@ -24,7 +24,7 @@ public class CalculatorTest {
 
     /**
      * Тест вычитания
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test
     public void testSub() throws Exception {
@@ -35,7 +35,7 @@ public class CalculatorTest {
 
     /**
      * Тест деления без аргументов
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test(expected = UserException.class)
     public void divException() throws UserException {
@@ -46,7 +46,7 @@ public class CalculatorTest {
 
     /**
      * Тест деления
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test()
     public void div() throws UserException {
@@ -57,7 +57,7 @@ public class CalculatorTest {
 
     /**
      * Тест деления на 0
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test(expected = IllegalArgumentException.class)
     public void divRuntime() throws UserException {
@@ -67,7 +67,7 @@ public class CalculatorTest {
 
     /**
      * Тест умножения
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test
     public void testMult() throws Exception {
@@ -78,7 +78,7 @@ public class CalculatorTest {
 
     /**
      * Тест возведения в степень
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test
     public void testPow() throws Exception {
@@ -89,7 +89,7 @@ public class CalculatorTest {
 
     /**
      * Тест остатка
-     * @throws Exception
+     * @throws Exception ошибка UserException
      */
     @Test
     public void testMod() throws Exception {
