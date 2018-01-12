@@ -6,9 +6,20 @@ package ru.Clinic.lessons;
  */
 public interface Pet {
 
+    /**
+     * Получить имя
+     * @return поле имя
+     */
     public String getName();
 
+    /**
+     * Издать звук
+     */
     public void makeSound();
 
+    /**
+     * Установить имя
+     * @param name новое имя
+     */
     public void setName(String name);
 }
