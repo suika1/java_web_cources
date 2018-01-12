@@ -5,7 +5,6 @@ package ru.Clinic.lessons;
  * Created by suika1 on 07.01.2018.
  */
 public class Clinic {
-    public final int MAX_SIZE = 10;
     /**
      *Список клиентов
      */
@@ -29,12 +28,12 @@ public class Clinic {
     /**
      * Добавить клиента
      */
-    public void addClient(final int position, final Client newClient){
+    public void addClient(final int position, final Client newClient) throws UserException{
         for (Client client: this.clients)
             if (client != null && client.getId().equals(newClient.getId())
                     && client.getPet().getName().equals(newClient.getPet().getName())
                     && client.getPet().getClass() == newClient.getPet().getClass()) {
-                System.out.println("Этот клиент с этим питомцем уже есть в базе данных");
+                throw new UserException("Этот клиент с этим питомцем уже есть в базе данных");
             }
         this.clients[position] = newClient;
     }
@@ -44,7 +43,7 @@ public class Clinic {
      * @param name Имя питомца
      * @return Клиенты
      */
-    public Client[] findClientsByPetName(final String name){
+    public Client[] findClientsByPetName(final String name) throws UserException{
         int count = 0;                                      //счетчик количества совпадений по иимени питомца
         for (Client client : this.clients) {                //в цикле определяем количество совпадений
             if (client != null && client.getPet().getName().equals(name)) {
@@ -54,7 +53,7 @@ public class Clinic {
         Client[] newClients = new Client[count];
         int position = 0;
         if (count < 1){
-            System.out.println("Такой питомец не зарегестрирован.");
+            throw new UserException("Такой питомец не зарегестрирован.");
         }else {
             for (Client client : this.clients) {
                 if (client != null && client.getPet().getName().equals(name)) {
@@ -72,7 +71,7 @@ public class Clinic {
      * @param id Имя клиента
      * @return питомцы
      */
-    public Pet[] findPetsByClientId(final String id){
+    public Pet[] findPetsByClientId(final String id) throws UserException{
         int count = 0;                                      //счетчик количества совпадений по иимени питомца
         for (Client client : this.clients) {                //в цикле определяем количество совпадений
             if (client != null && client.getId().equals(id)) {
@@ -82,7 +81,7 @@ public class Clinic {
         Pet[] pets = new Pet[count];
         int position = 0;
         if (count<1){
-            System.out.println("Клиент не найден.");
+            throw new UserException("Клиент не найден.");
         }else {
             for (Client client : this.clients) {
                 if (client != null && client.getId().equals(id)) {
@@ -100,7 +99,7 @@ public class Clinic {
      * @param id Id клиента
      * @param newPetName Новое имя питомца
      */
-    public void changePetName(String id, String newPetName){
+    public void changePetName(String id, String newPetName) throws UserException{
         int count = 0;
         for (Client client : this.clients){
             if (client != null && client.getId().equals(id)){
@@ -108,7 +107,8 @@ public class Clinic {
                 client.getPet().setName(newPetName);
             }
         }
-        if (count == 0) System.out.println("Клиент не найден.");
+        if (count == 0)
+            throw new UserException("Клиент не найден");
     }
 
     /**
@@ -116,7 +116,7 @@ public class Clinic {
      * @param petName Имя питомца
      * @param newId Новое id
      */
-    public void changeClientId(String petName, String newId){
+    public void changeClientId(String petName, String newId) throws UserException{
         int count = 0;
         for (Client client : this.clients){
             if (client != null && client.getPet().getName().equals(petName)){
@@ -124,6 +124,7 @@ public class Clinic {
                 client.setId(newId);
             }
         }
-        if (count == 0) System.out.println("Питомец не найден");
+        if (count == 0)
+            throw new UserException("Питомец не найден");
     }
 }
