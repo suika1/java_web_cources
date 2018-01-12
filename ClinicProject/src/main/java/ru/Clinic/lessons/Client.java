@@ -9,6 +9,11 @@ public class Client {
     private String id;
     private final Pet pet;
 
+    /**
+     * Конструктор
+     * @param id айди клиента
+     * @param pet питомец клиента
+     */
     public Client(String id, Pet pet){
         this.id = id;
         this.pet = pet;
