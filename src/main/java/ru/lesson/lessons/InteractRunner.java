@@ -10,7 +10,6 @@ import java.util.Scanner;
  */
 public class InteractRunner{
     public static void main(String[] arg){
-        boolean divzer;
         Scanner reader = new Scanner(System.in);
         try{
             Calculator calc = new Calculator();
