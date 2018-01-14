@@ -127,4 +127,46 @@ public class Clinic {
         if (count == 0)
             throw new UserException("Питомец не найден");
     }
+
+    /**
+     * Удаление записей про клиента
+     * @param id id клиента
+     */
+    public void deleteRecordsById(String id){
+        int count = 0;
+        int size = 0;
+        for (Client client : this.clients){
+            if (client != null && client.getId().equals(id)){
+                for (Client client1 : this.clients){
+                    if (client1 != null)
+                        size++;   // считаем размер заполненного массива
+                }
+                System.out.println("SIZE == "+size+"\n");
+                this.clients[count]=this.clients[size];
+                this.clients[size]=null;
+            }
+            count++;
+        }
+    }
+
+    /**
+     * Удаление записей про питомца
+     * @param name Имя питомца
+     */
+   public void deleteRecordsByName(String name){
+       int count = 0;
+       int size = 0;
+       for (Client client : this.clients){
+           if (client != null && client.getPet().getName().equals(name)){
+               for (Client client1 : this.clients){
+                   if (client1 != null)
+                       size++;   // считаем размер заполненного массива
+               }
+               System.out.println("SIZE == "+size+"\n");
+               this.clients[count]=this.clients[size];
+               this.clients[size]=null;
+           }
+           count++;
+       }
+    }
 }
