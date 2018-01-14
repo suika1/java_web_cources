@@ -20,7 +20,7 @@ public class ClinicRunner {
          * Считывание действий, обработка каждого действия.
          */
         while (!s.equals("exit")){
-            System.out.printf("Выбирайте действия\n Список действий:\nadd|show\nfind clients|find pets\nchange pet name\nchange client id|exit\n");
+            System.out.printf("Выбирайте действия\n Список действий:\nadd|show\nfind clients|find pets\nchange pet name\ndelete by id|delete by name\nchange client id|exit\n");
             s = scanner.nextLine();
             if (s.equals("add")) {
                 System.out.printf("Введите id клиента:\n");
@@ -95,6 +95,14 @@ public class ClinicRunner {
                 } catch (UserException e){
                     System.out.println(e.getMessage());
                 }
+            }else if (s.equals("delete by id")) {
+                System.out.printf("Введите id клиента, записи про которого хотите удалить:\n");
+                id = scanner.nextLine();
+                clinic.deleteRecordsById(id);
+            }else if (s.equals("delete by name")) {
+                System.out.printf("Введите имя питомца, записи про которого хотите удалить:\n");
+                name = scanner.nextLine();
+                clinic.deleteRecordsByName(name);
             }
             else {
                 if (!s.equals("exit"))
