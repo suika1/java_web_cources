@@ -20,7 +20,7 @@ public class ClinicRunner {
          * Считывание действий, обработка каждого действия.
          */
         while (!s.equals("exit")){
-            System.out.printf("Выбирайте действия\n Список действий:\nadd|show\nfind clients|find pets\nchange pet name\ndelete by id|delete by name\nchange client id|exit\n");
+            System.out.printf("----------------\nВыбирайте действия\n Список действий:\nadd|show\nfind clients|find pets\nchange pet name\ndelete by id|delete by name\nchange client id|exit\n----------------\n");
             s = scanner.nextLine();
             if (s.equals("add")) {
                 System.out.printf("Введите id клиента:\n");
