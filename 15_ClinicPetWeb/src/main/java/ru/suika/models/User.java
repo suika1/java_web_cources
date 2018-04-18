@@ -1,14 +1,12 @@
 package ru.suika.models;
 
-import ru.Clinic.lessons.Pet;
-import ru.Clinic.lessons.Dog;
-import ru.Clinic.lessons.Cat;
+import java.util.Set;
 
 public class User extends Base {
     private String login;
     private String email;
-//    private Role role;
-//    private List<Message> messages;
+    private Role role;
+    private Set<Message> messages;
 
     public User() {
     }
@@ -19,21 +17,21 @@ public class User extends Base {
         this.email = email;
     }
 
-//    public Role getRole() {
-//        return role;
-//    }
-//
-//    public void setRole(Role role) {
-//        this.role = role;
-//    }
-//
-//    public List<Message> getMessages() {
-//        return messages;
-//    }
-//
-//    public void setMessages(List<Message> messages) {
-//        this.messages = messages;
-//    }
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Set<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Set<Message> messages) {
+        this.messages = messages;
+    }
 
     public String getLogin() {
         return this.login;
@@ -41,10 +39,6 @@ public class User extends Base {
 
     public String getEmail() {
         return this.email;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setLogin(String login) {
