@@ -27,3 +27,47 @@
 2018-04-18 23:42:04 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
 2018-04-18 23:42:42 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
 2018-04-18 23:43:18 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 20:41:39 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:07:52 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:08:04 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:09:38 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:12:15 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:30:16 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:30:19 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 23502
+2018-04-19 21:30:19 ERROR SqlExceptionHelper:146 - ОШИБКА: нулевое значение в столбце "user_id" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (4, LolText, null).
+2018-04-19 21:30:19 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in ru.suika.models.Message entry (don't flush the Session after an exception occurs)
+2018-04-19 21:34:12 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:34:14 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 23502
+2018-04-19 21:34:14 ERROR SqlExceptionHelper:146 - ОШИБКА: нулевое значение в столбце "user_id" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (5, LolText, null).
+2018-04-19 21:34:14 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in ru.suika.models.Message entry (don't flush the Session after an exception occurs)
+2018-04-19 21:34:25 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:34:28 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 23502
+2018-04-19 21:34:28 ERROR SqlExceptionHelper:146 - ОШИБКА: нулевое значение в столбце "user_id" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (6, LolText, null).
+2018-04-19 21:34:28 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in ru.suika.models.Message entry (don't flush the Session after an exception occurs)
+2018-04-19 21:36:02 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:36:06 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 23502
+2018-04-19 21:36:06 ERROR SqlExceptionHelper:146 - ОШИБКА: нулевое значение в столбце "user_id" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (7, LolText, null).
+2018-04-19 21:36:06 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in ru.suika.models.Message entry (don't flush the Session after an exception occurs)
+2018-04-19 21:36:44 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:39:08 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:39:12 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 23502
+2018-04-19 21:39:12 ERROR SqlExceptionHelper:146 - ОШИБКА: нулевое значение в столбце "role_id" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (6, test, null, null).
+2018-04-19 21:39:12 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in ru.suika.models.Message entry (don't flush the Session after an exception occurs)
+2018-04-19 21:41:03 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:42:11 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:43:48 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:43:51 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 23502
+2018-04-19 21:43:51 ERROR SqlExceptionHelper:146 - ОШИБКА: нулевое значение в столбце "user_id" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (9, LolText, null).
+2018-04-19 21:43:51 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in ru.suika.models.Message entry (don't flush the Session after an exception occurs)
+2018-04-19 21:44:27 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2018-04-19 21:44:31 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 23502
+2018-04-19 21:44:31 ERROR SqlExceptionHelper:146 - ОШИБКА: нулевое значение в столбце "user_id" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (10, LolText, null).
+2018-04-19 21:44:31 ERROR AssertionFailure:50 - HHH000099: an assertion failure occured (this may indicate a bug in Hibernate, but is more likely due to unsafe use of the session): org.hibernate.AssertionFailure: null id in ru.suika.models.Message entry (don't flush the Session after an exception occurs)
+2018-04-19 21:50:00 DEBUG logging:194 - Logging Provider: org.jboss.logging.Log4jLoggerProvider

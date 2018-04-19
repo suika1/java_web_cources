@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public interface Storage {
 
-    public Collection<User> values();
+    public Collection<?> values();
 
     public int add(final User user);
 
